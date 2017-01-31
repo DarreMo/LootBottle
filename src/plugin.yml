@@ -1,0 +1,10 @@
+name: LootBottles
+main: me.DarreMo.LootBottle.LootBottleM
+version: 0.1
+author: DarreMo
+commands:
+     testcmd:
+            description: Testcommand
+            usage: /<command>
+     getbottle:
+             description: Gives you 10 bottles
