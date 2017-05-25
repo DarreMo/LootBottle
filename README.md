@@ -1,0 +1,2 @@
+# LootBottle
+Bukkit Plugin
