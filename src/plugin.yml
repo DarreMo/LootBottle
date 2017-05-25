@@ -1,10 +1,14 @@
 name: LootBottles
 main: me.DarreMo.LootBottle.LootBottleM
-version: 0.1
+version: 0.2
 author: DarreMo
 commands:
      testcmd:
             description: Testcommand
             usage: /<command>
      getbottle:
-             description: Gives you 10 bottles
+            description: Gives you 10 bottles
+            usage: /<command>
+     lbconfigure:
+            description: Configure Bottle's
+            usage: /<command>
