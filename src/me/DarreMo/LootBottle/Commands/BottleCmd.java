@@ -22,6 +22,7 @@ import java.util.Objects;
 public class BottleCmd implements CommandExecutor {
 
     static ItemStack normal = new ItemStack(Material.DRAGONS_BREATH, 10);
+
     static ItemStack shiny = new ItemStack(Material.DRAGONS_BREATH, 1);
     {
         shiny.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
@@ -31,7 +32,6 @@ public class BottleCmd implements CommandExecutor {
         shinym.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 
         ArrayList<String> lore = new ArrayList<>();
-        lore.add("");
         lore.add(ChatColor.GRAY+"------------------");
         lore.add(ChatColor.DARK_PURPLE + "How did this bottle get so shiny?");
         lore.add(ChatColor.LIGHT_PURPLE + "Nobody will ever now");
