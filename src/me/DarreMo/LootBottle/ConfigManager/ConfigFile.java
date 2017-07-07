@@ -56,6 +56,7 @@ public class ConfigFile{
     public Set<String> getKeys(String path) {
         return config.getConfigurationSection(path).getKeys(false);
     }
+    public ConfigurationSection getConfigurationSection(String path) { return config.getConfigurationSection(path); }
 
     public void save() {
         try {

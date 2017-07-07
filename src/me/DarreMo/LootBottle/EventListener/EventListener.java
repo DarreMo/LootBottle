@@ -14,6 +14,6 @@ public class EventListener implements Listener {
     @EventHandler
     public void onJoin (PlayerJoinEvent e) {
          Player player = e.getPlayer();
-         e.setJoinMessage(ChatColor.AQUA + "Welcome to the server, " + ChatColor.DARK_AQUA+ player.getName() );
+         player.sendMessage(ChatColor.AQUA + "Welcome to the server, " + ChatColor.DARK_AQUA+ player.getName() );
     }
 }

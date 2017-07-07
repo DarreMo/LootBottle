@@ -1,8 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="LootBottle2:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/LootBottle2_jar</output-path>
-    <root id="archive" name="LootBottle2.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LootBottle</output-path>
+    <root id="archive" name="LootBottle.jar">
       <element id="module-output" name="LootBottle2" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
     </root>
   </artifact>
 </component>

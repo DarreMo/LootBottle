@@ -10,6 +10,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * Created by Timon on 31-1-2017.
  */
@@ -36,16 +39,13 @@ public class LBConfigure implements CommandExecutor {
 
                         else {
                             String message = "Bottle ";
-                            for (int arg = 1; arg < amount; arg++) {
-                                message += args[arg] + ", " ;
+                            Arrays.asList(args).stream().skip(1).forEach( a -> LootBottleM.getBottles().set("bottles."+a+".name", a));
+                            message += Arrays.asList(args).stream().skip(1).map(a -> a).collect(Collectors.joining(", "));
+                            LootBottleM.getBottles().save();
 
-                                // Todo: CreateBottle
+                            // TODO Permission
 
-                                LootBottleM.getBottles().set("bottles."+args+".name", arg );
-                                LootBottleM.getBottles().save();
-
-                            }
-                            message += "created." ;
+                            message += " created." ;
                             sender.sendMessage(ChatColor.GREEN+message);
                         }
                         break;
@@ -56,9 +56,7 @@ public class LBConfigure implements CommandExecutor {
                         }
                         else {
                             Player player = (Player) sender;
-
                             player.sendMessage(ChatColor.GREEN+"Opening Bottle Edit Menu");
-
                             Inventory inv = Bukkit.createInventory(null, 9, "Bottle Select");
 
                             inv.setItem(0, BottleCmd.shiny);

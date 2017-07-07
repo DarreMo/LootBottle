@@ -9,6 +9,7 @@ import me.DarreMo.LootBottle.ConfigManager.ConfigManager;
 import me.DarreMo.LootBottle.EventListener.BottleListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -47,6 +48,9 @@ public class LootBottleM extends JavaPlugin {
     }
     public static ConfigFile getBottles(){
         return bottles;
+    }
+    public static ConfigurationSection getConfigurationSecion (String path) {
+        return getBottles().getConfigurationSection(path);
     }
 
 }
